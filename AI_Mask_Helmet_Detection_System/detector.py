@@ -1,7 +1,7 @@
 from ultralytics import YOLO
-from config import TARGET_CLASSES, CONFIDENCE_THRESHOLD
+from config import MODEL_PATH, CONFIDENCE_THRESHOLD
 
-model = YOLO("yolov8n.pt")
+model = YOLO(MODEL_PATH)
 
 def detect(frame):
     results = model(frame, verbose=False)[0]
@@ -10,10 +10,14 @@ def detect(frame):
     for box in results.boxes:
         cls_id = int(box.cls[0])
         label = model.names[cls_id]
-        confidence = float(box.conf[0])
+        conf = float(box.conf[0])
 
-        if label in TARGET_CLASSES and confidence > CONFIDENCE_THRESHOLD:
+        if conf >= CONFIDENCE_THRESHOLD:
             x1, y1, x2, y2 = map(int, box.xyxy[0])
-            detections.append((label, x1, y1, x2, y2))
+            detections.append({
+                "label": label,
+                "confidence": conf,
+                "bbox": (x1, y1, x2, y2)
+            })
 
     return detections
