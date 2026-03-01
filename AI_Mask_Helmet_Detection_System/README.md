@@ -1,150 +1,79 @@
-# AI Face Mask & Safety Helmet Detection System
-# 🦺 AI Face Mask & Safety Helmet Detection System
+# 🦺 AI Industrial Safety Compliance Monitoring System
 
-An AI-powered safety compliance monitoring system built using Python, OpenCV, and YOLOv8.
+An advanced AI-powered Industrial Safety Monitoring System built using Python, OpenCV, and YOLOv8.
 
-This project is designed to detect individuals in a video stream and serve as a foundation for integrating face mask and safety helmet detection models. It logs detection events and captures evidence images for monitoring purposes.
+This system detects:
+- 👤 Persons
+- 🪖 Safety Helmets
+- 😷 Face Masks
 
-Ideal for:
+It evaluates real-time safety compliance and automatically flags violations when required protective equipment is missing.
+
+Designed for:
 - Industrial safety monitoring
 - Construction site compliance
-- Public safety enforcement
-- AI & Computer Vision learning
-- Engineering projects and hackathons
+- Smart factory automation
+- AI & Computer Vision projects
+- Final year engineering projects
+- Hackathons & portfolio enhancement
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Real-time person detection
-- Framework ready for mask/helmet detection integration
-- Automatic image capture
-- Timestamp-based logging
-- Webcam or video input support
-- Lightweight YOLOv8 model
+- ✅ Real-time person detection
+- ✅ Helmet detection integration
+- ✅ Mask detection integration
+- ✅ Safety compliance logic (SAFE / VIOLATION)
+- ✅ Automatic violation logging (CSV)
+- ✅ Evidence image capture
+- ✅ Modular and scalable architecture
+- ✅ Ready for dashboard integration
 
 ---
 
-## 🧠 Tech Stack
+## 🧠 System Architecture
 
-- Python 3.10+
-- OpenCV
-- Ultralytics YOLOv8
-- NumPy
+1. Video stream captured from webcam or IP camera
+2. YOLOv8 custom-trained model detects:
+   - Person
+   - Helmet
+   - Mask
+3. Bounding box overlap logic checks compliance
+4. If violation detected:
+   - Status displayed on screen
+   - Event logged in CSV
+   - Image stored as evidence
 
 ---
 
 ## 📂 Project Structure
 
-AI_Mask_Helmet_Detection_System/
+AI_Industrial_Safety_System/
 │
 ├── main.py
 ├── detector.py
 ├── config.py
+├── utils.py
 ├── requirements.txt
-├── logs/
-├── captures/
-└── README.md
+└── logs/
+    ├── violations.csv
+    └── images/
+
+---
+
+## 🛠 Tech Stack
+
+- Python 3.10+
+- OpenCV
+- Ultralytics YOLOv8
+- NumPy
+- Pandas
 
 ---
 
 ## ⚙️ Installation
 
-1. Install Python 3.10 or later.
-2. Clone the repository:
+### 1️⃣ Install Python (3.10+ recommended)
 
-   git clone <your-repository-link>
-
-3. Navigate to the project directory:
-
-   cd AI_Mask_Helmet_Detection_System
-
-4. Install dependencies:
-
-   pip install -r requirements.txt
-
-5. Run the system:
-
-   python main.py
-
-The YOLOv8 model will automatically download during first execution.
-
----
-
-## ⚠️ Important Notice
-
-The default YOLOv8 COCO model does NOT include mask or helmet classes.
-
-To enable real mask/helmet detection:
-- Train a custom YOLO model on a mask/helmet dataset
-- Replace the default model weights in `detector.py` with your trained model file
-
-This repository provides a complete detection pipeline ready for integration.
-
----
-
-## 📊 How It Works
-
-1. Video stream is captured from webcam or file.
-2. YOLOv8 detects persons in each frame.
-3. Detection events are:
-   - Logged with timestamps
-   - Saved as image evidence in `/captures`
-
-With a trained model, mask and helmet compliance detection can be implemented.
-
----
-
-## 🖥 System Requirements
-
-Minimum:
-- Windows 11
-- 8GB RAM
-- Webcam or video input
-
-Recommended:
-- NVIDIA GPU for faster inference
-
----
-
-## 🔒 Ethical & Legal Notice
-
-This project is intended for educational and research purposes only.
-Ensure compliance with privacy and workplace regulations before real-world deployment.
-
----
-
-## 🚀 Future Improvements
-
-- Mask compliance classification
-- Helmet detection model integration
-- Real-time dashboard
-- Alert system (Email/Telegram)
-- Safety violation analytics
-
----
-
-## 👨‍💻 Author
-
-Developed as an AI-based industrial safety monitoring project.
-
-AI-based safety compliance monitoring system using YOLOv8 and OpenCV.
-
-IMPORTANT:
-Default YOLOv8 COCO model does NOT include mask or helmet classes.
-For real implementation, use a custom-trained mask/helmet YOLO model.
-
-## Features
-- Real-time person detection (placeholder)
-- Image capture and logging
-- Webcam or video input support
-
-## Setup
-
-1. Install Python 3.10+
-2. Install dependencies:
-   pip install -r requirements.txt
-3. Run:
-   python main.py
-
-Replace model weights with trained mask/helmet model for accurate detection.
+### 2️⃣ Clone Repository
