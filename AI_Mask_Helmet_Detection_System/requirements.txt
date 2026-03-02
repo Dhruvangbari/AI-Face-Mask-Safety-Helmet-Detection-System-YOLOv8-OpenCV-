@@ -1,6 +1,28 @@
+# Core AI
 ultralytics==8.2.0
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Computer Vision
 opencv-python==4.9.0.80
-numpy>=1.23.0
-pandas>=1.5.0
-torch>=2.0.0
-torchvision>=0.15.0
+numpy>=1.24.0
+
+# Data & Logging
+pandas>=2.0.0
+
+# Object Tracking (for advanced version)
+scipy>=1.10.0
+filterpy>=1.4.5
+
+# Dashboard (optional but recommended)
+streamlit>=1.32.0
+matplotlib>=3.7.0
+
+# Performance
+tqdm>=4.65.0
+
+# Alerts (optional)
+requests>=2.31.0
+
+# Utility
+pyyaml>=6.0
