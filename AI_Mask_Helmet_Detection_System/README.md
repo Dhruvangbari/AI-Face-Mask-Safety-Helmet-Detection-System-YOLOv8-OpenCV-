@@ -1,5 +1,6 @@
 # 🦺 AI Industrial Safety Compliance Monitoring System
 
+
 An advanced AI-powered Industrial Safety Monitoring System built using Python, OpenCV, and YOLOv8.
 
 This system detects:
